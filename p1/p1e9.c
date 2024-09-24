@@ -8,8 +8,8 @@ int main()
     double longitud, area;
     double radio;
     printf("Hola\n");
-    printf("Este programa calcula la longitud y el área de un círculo\n");
-    printf("Introduce el radio del círculo: ");
+    printf("Este programa calcula la longitud y el Ã¡rea de un cÃ­rculo\n");
+    printf("Introduce el radio del cÃ­rculo: ");
     scanf("%lg", &radio);
     longitud = 2*PI*radio;
     area = PI*(radio*radio);

@@ -5,7 +5,7 @@ int main(void)
     double  salary, bruto;
     int     years;
 
-    printf("Introduzca Sueldo Base y Antigüedad: ");
+    printf("Introduzca Sueldo Base y AntigÃ¼edad: ");
     scanf("%lg %d", &salary, &years);
 
     bruto = salary + 60 * (years / 5) + 6 * (years % 5);

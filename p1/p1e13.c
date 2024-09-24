@@ -12,5 +12,5 @@ int main(void)
 
     cal = nt * 0.7 + np * 0.3;
 
-    printf("La caqlificacion es: %lg\n", cal);
+    printf("La calificacion es: %lg\n", cal);
 }
