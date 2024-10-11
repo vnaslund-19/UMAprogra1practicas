@@ -4,17 +4,27 @@
 int main()
 {
     int num_a_buscar, num;
+
     printf("Introduzca el numero entero a buscar (distinto de cero): ");
     scanf(" %d", &num_a_buscar);
-    printf("Introduzca una secuencia de numeros enteros terminada en cero:\n");
-    scanf(" %d", &num);
 
-    bool found = false;
-    while (num != 0)
+    if (num_a_buscar == 0)
+        printf("Error\n");
+    else
     {
-        if (num == num_a_buscar)
-            found = true;
-        scanf(" %d", &num); // lectura del número a procesar en la siguiente iteración
+        printf("Introduzca una secuencia de numeros enteros terminada en cero:\n");
+        scanf(" %d", &num);
+
+        bool found = false;
+        while (num != 0)
+        {
+            if (num == num_a_buscar)
+                found = true;
+            scanf(" %d", &num);
+        }
+        if (found)
+            printf("El numero %d SI aparece en la secuencia\n", num_a_buscar);
+        else
+            printf("El numero %d NO aparece en la secuencia\n", num_a_buscar);
     }
-// ...
 }
