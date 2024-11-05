@@ -32,7 +32,7 @@ bool    son_comprimos(int n1, int n2)
 
 void encontrar_comprimos(int lb, int ub)
 {
-    if (lb >= ub)
+    if (lb >= ub || lb <= 0)
     {
         printf("Error\n");
     }
