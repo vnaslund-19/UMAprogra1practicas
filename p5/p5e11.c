@@ -3,9 +3,9 @@
 
 int leer_y_contar()
 {
-    int     dir_changes = 1;
+    int     dir_changes = 0;
     int     num, prev = 0, current = 0, max = 0;
-    bool    rising = false, falling = false;
+    bool    rising = false, falling = false, first = true;
 
 
     printf("Introduzca sucesion de enteros hasta cero: ");
@@ -15,15 +15,21 @@ int leer_y_contar()
         if (prev != 0 && ((rising && num < prev) || (falling && num > prev)))
             dir_changes++;
 
-        if (prev != 0 && num > prev)
+        if (prev != 0 && num > prev && !rising)
         {
             rising = true;
             falling = false;
+            first = false;
         }
-        else if (prev != 0 && num < prev)
+        else if (prev != 0 && num < prev && !falling)
         {
             falling = true;
             rising = false;
+            if (first)
+            {
+                dir_changes++;
+                first = false;
+            }
         }
 
         if (dir_changes == 2)
